@@ -495,10 +495,13 @@ export default function App() {
         position: 'relative', overflow: 'hidden',
       }}>
         {/* Dusty-blue glow */}
-        <div style={{
-          position: 'absolute', inset: 0, pointerEvents: 'none',
-          background: `radial-gradient(ellipse 55% 55% at 50% 50%, rgba(122,155,181,0.18) 0%, transparent 65%)`,
-        }} />
+       <div style={{
+  position: 'absolute',
+  inset: 0,
+  pointerEvents: 'none',
+  background: '#4C2027'
+}} />
+
 
         <div style={{ position: 'relative' }}>
           <span style={{
