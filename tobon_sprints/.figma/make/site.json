@@ -1,0 +1,11 @@
+{
+  "title": "TOBON_SPRINTS",
+  "description": "Creates elegant, modern landing pages using brand guidelines and design inspirations to enhance visual appeal and readability for businesses.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mynerve&display=swap');
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Karumbi';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Karumbi');
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background-color: #f7f4ef;
+  color: #2A1F1A;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }
+.font-serif { font-family: 'DM Serif Display', Georgia, serif; }
+
+/* ── Nav ── */
+.nav-link {
+  color: #2A1F1A;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  transition: opacity 0.2s;
+}
+.nav-link:hover { opacity: 1; }
+
+.btn-outline-pink {
+  padding: 10px 24px;
+  border: 1px solid #6a2131;
+  color: #6a2131;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+.btn-outline-pink:hover { background: #6a2131; color: #f7f4ef; }
+
+/* ── Buttons ── */
+.btn-pink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: #2A1F1A;
+  color: #f7f4ef;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.btn-pink:hover { background: #6a2131; }
+
+.btn-outline-cream {
+  display: block;
+  text-align: center;
+  padding: 14px 24px;
+  border: 1px solid rgba(42,31,26,0.18);
+  color: #2A1F1A;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn-outline-cream:hover { background: #2A1F1A; color: #f7f4ef; border-color: #2A1F1A; }
+
+.btn-featured {
+  display: block;
+  text-align: center;
+  padding: 14px 24px;
+  background: #c7c0d3;
+  border: 1px solid #c7c0d3;
+  color: #6a2131;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.btn-featured:hover { background: #6a2131; border-color: #6a2131; color: #c7c0d3; }
+
+.btn-cta {
+  display: inline-block;
+  padding: 18px 44px;
+  background: #f7f4ef;
+  color: #2A1F1A;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-cta:hover { background: #6a2131; color: #f7f4ef; }
+
+/* ── Accordion ── */
+.step-row {
+  border-bottom: 1px solid rgba(42,31,26,0.1);
+  padding: 36px 0;
+  cursor: pointer;
+  transition: padding-left 0.3s ease;
+}
+.step-row:hover { padding-left: 12px; }
+
+.plan-card { transition: transform 0.25s ease; }
+.plan-card:hover { transform: translateY(-6px); }
+
+/* ── Texture ── */
+.harlequin {
+  background-image:
+    repeating-linear-gradient(45deg,  transparent 0, transparent 24px, rgba(168,64,64,0.06)  24px, rgba(168,64,64,0.06)  25px),
+    repeating-linear-gradient(-45deg, transparent 0, transparent 24px, rgba(122,155,181,0.06) 24px, rgba(122,155,181,0.06) 25px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hero-headline { font-size: clamp(48px, 13vw, 80px) !important; }
+  .plans-grid { grid-template-columns: 1fr !important; }
+  .method-grid { grid-template-columns: 48px 1fr auto !important; gap: 16px !important; }
+  .philosophy-grid { grid-template-columns: 1fr !important; }
+  .section-pad { padding-left: 24px !important; padding-right: 24px !important; }
+  .footer-inner { flex-direction: column; gap: 24px; }
+  .strip { gap: 40px !important; }
+  .hero-bottom { flex-direction: column; align-items: flex-start !important; }
+  .nav-inner { padding: 0 24px !important; }
+}
